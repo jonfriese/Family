@@ -1,0 +1,23 @@
+<h1>Listing Fathers</h1>
+
+<table>
+  <tr>
+    <th>Name</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @fathers.each do |father| %>
+  <tr>
+    <td><%= father.name %></td>
+    <td><%= link_to 'Sons', father_sons_path(father) %></td>
+    <td><%= link_to 'Edit', edit_father_path(father) %></td>
+    <td><%= link_to 'Destroy', father, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Father', new_father_path %>
