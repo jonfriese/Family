@@ -2,10 +2,7 @@ Family::Application.routes.draw do
 
   root :to => 'fathers#index'
 
-  resources :fathers do
-    resources :sons
-  end
-
+  resources :fathers
 
 
 

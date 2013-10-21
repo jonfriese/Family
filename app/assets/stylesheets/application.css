@@ -11,3 +11,10 @@
  *= require_self
  *= require_tree .
  */
+.nested_family {
+  margin-left: 30px;
+}
+
+.nested_family .nested_family .nested_family .nested_family .nested_family .nested_family{
+  margin-left: 0;
+}

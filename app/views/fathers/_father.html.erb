@@ -1,0 +1,7 @@
+<div class="father">
+
+    <b><%= father.name %>:</b>
+    <%= link_to "Add Son", new_father_path(:parent_id => father) %> |
+    <%= link_to "Destroy", father, method: :delete, data: "Are you sure?" %>
+
+</div>

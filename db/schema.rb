@@ -11,19 +11,15 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20131020060903) do
+ActiveRecord::Schema.define(:version => 20131020073230) do
 
   create_table "fathers", :force => true do |t|
     t.string   "name"
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
+    t.string   "ancestry"
   end
 
-  create_table "sons", :force => true do |t|
-    t.string   "name"
-    t.string   "father_id"
-    t.datetime "created_at", :null => false
-    t.datetime "updated_at", :null => false
-  end
+  add_index "fathers", ["ancestry"], :name => "index_fathers_on_ancestry"
 
 end
